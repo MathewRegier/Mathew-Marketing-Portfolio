@@ -426,6 +426,30 @@ html {
   -webkit-overflow-scrolling: touch !important;
   overscroll-behavior-y: none !important;
   overscroll-behavior-x: none !important;
+  overflow-x: hidden !important;
+}
+
+/* GLOBAL FIX: Disable ALL internal scrolling on ALL elements */
+*,
+*::before,
+*::after {
+  overflow: visible !important;
+  overflow-x: visible !important;
+  overflow-y: visible !important;
+  overscroll-behavior: none !important;
+  -webkit-overflow-scrolling: auto !important;
+  scroll-behavior: auto !important;
+}
+
+/* Only allow scrolling on the main body/html */
+body {
+  overflow-y: auto !important;
+  overflow-x: hidden !important;
+}
+
+html {
+  overflow-y: auto !important;
+  overflow-x: hidden !important;
 }
 
 /* Specific fixes for before/after gallery section */
@@ -440,15 +464,44 @@ div:has(.aspect-square) * {
   touch-action: pan-y !important;
 }
 
-/* Alternative selector for better browser support */
-.bg-dark-card\\/70 {
+/* Target all common container classes that might create scroll contexts */
+.bg-dark-card,
+.bg-dark-card\\/50,
+.bg-dark-card\\/70,
+.bg-dark-bg,
+.bg-dark-bg\\/50,
+.bg-dark-bg\\/30,
+.container,
+.max-w-4xl,
+.max-w-5xl,
+.max-w-6xl,
+.max-w-7xl,
+.rounded-xl,
+.rounded-lg,
+.flex,
+.grid,
+.space-y-6,
+.space-y-8,
+.gap-6,
+.gap-8 {
   overflow: visible !important;
   overscroll-behavior: none !important;
   -webkit-overflow-scrolling: auto !important;
   touch-action: pan-y !important;
 }
 
-.bg-dark-card\\/70 * {
+/* Target all children of these containers */
+.bg-dark-card *,
+.bg-dark-card\\/50 *,
+.bg-dark-card\\/70 *,
+.bg-dark-bg *,
+.bg-dark-bg\\/50 *,
+.bg-dark-bg\\/30 *,
+.container *,
+.flex *,
+.grid *,
+.rounded-xl *,
+.rounded-lg * {
   overflow: visible !important;
   overscroll-behavior: none !important;
   -webkit-overflow-scrolling: auto !important;
