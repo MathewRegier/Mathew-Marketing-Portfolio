@@ -1,0 +1,19 @@
+{
+  "name": "mathew-regier-portfolio",
+  "version": "1.0.0",
+  "description": "Modern Marketing Portfolio for Mathew Regier",
+  "main": "server.js",
+  "scripts": {
+    "dev": "node server.js",
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.18.2",
+    "path": "^0.12.7",
+    "nodemailer": "^6.9.7",
+    "dotenv": "^16.3.1"
+  },
+  "keywords": ["marketing", "portfolio", "automation", "ai"],
+  "author": "Mathew Regier",
+  "license": "MIT"
+}
