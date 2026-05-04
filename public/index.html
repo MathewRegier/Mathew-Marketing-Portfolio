@@ -1,1423 +1,359 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, viewport-fit=cover">
-    <title>Mathew Regier - Marketing Automation Specialist</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        'neon-blue': '#00f5ff',
-                        'neon-purple': '#bf00ff',
-                        'neon-green': '#39ff14',
-                        'neon-pink': '#ff073a',
-                        'dark-bg': '#0a0a0f',
-                        'dark-card': '#1a1a2e',
-                        'dark-accent': '#16213e'
-                    },
-                    animation: {
-                        'float': 'float 6s ease-in-out infinite',
-                        'pulse-glow': 'pulse-glow 2s ease-in-out infinite alternate',
-                        'slide-up': 'slide-up 0.8s ease-out',
-                        'neon-flicker': 'neon-flicker 1.5s ease-in-out infinite alternate',
-                        'gradient-shift': 'gradient-shift 8s ease-in-out infinite',
-                    }
-                }
-            }
-        }
-    </script>
-    <link rel="stylesheet" href="css/styles-clean.css">
-    <script>
-        // Critical CSS fixes applied immediately
-        document.addEventListener('DOMContentLoaded', function() {
-            const navbar = document.querySelector('nav');
-            if (navbar) {
-                navbar.style.position = 'fixed';
-                navbar.style.top = '0';
-                navbar.style.left = '0';
-                navbar.style.right = '0';
-                navbar.style.zIndex = '50';
-                navbar.style.transform = 'translateY(0)';
-                navbar.style.visibility = 'visible';
-                navbar.style.opacity = '1';
-            }
-        });
-    </script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Mathew Regier - marketing automation, AI, and full-stack software for any business that runs on lead generation. Personal portfolio of recent work.">
+  <meta name="theme-color" content="#FAFAFA">
+  <title>Mathew Regier - Portfolio</title>
+  <link rel="preload" href="/css/styles.css?v=20260504b" as="style">
+  <link rel="stylesheet" href="/css/styles.css?v=20260504b">
 </head>
-<body class="bg-gradient-to-br from-dark-bg via-gray-900 to-dark-accent text-white overflow-x-hidden">
-    <!-- Particle Background -->
-    <div id="particles-container" class="fixed inset-0 z-0"></div>
-    
-    <!-- Navigation -->
-    <nav class="fixed top-0 w-full bg-dark-bg border-b-2 border-neon-blue/30 z-50 shadow-lg" style="position: fixed !important; top: 0 !important; width: 100% !important; z-index: 9999 !important; background-color: #0a0a0f !important; visibility: visible !important; opacity: 1 !important; transform: translateY(0) !important;">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between items-center py-4">
-                <div class="text-2xl font-bold text-neon-blue">
-                    MR
-                </div>
-                <div class="hidden md:flex space-x-8">
-                    <a href="#hero" class="text-white hover:text-neon-blue transition-colors duration-300 font-medium">Home</a>
-                    <a href="#competencies" class="text-white hover:text-neon-blue transition-colors duration-300 font-medium">Skills</a>
-                    <a href="#programs" class="text-white hover:text-neon-blue transition-colors duration-300 font-medium">Programs</a>
-                    <a href="#performance" class="text-white hover:text-neon-blue transition-colors duration-300 font-medium">Performance</a>
-                    <a href="#websites" class="text-white hover:text-neon-blue transition-colors duration-300 font-medium">Websites</a>
-                    <a href="#contact" class="text-white hover:text-neon-blue transition-colors duration-300 font-medium">Contact</a>
-                </div>
-                <div class="md:hidden">
-                    <button id="mobile-menu-button" class="text-neon-blue p-2">
-                        <i class="fas fa-bars text-xl"></i>
-                    </button>
-                </div>
-            </div>
-        </div>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header" data-header>
+    <nav class="nav shell" aria-label="Primary navigation">
+      <a class="brand" href="#top" aria-label="Mathew Regier home">
+        <span class="brand-mark" aria-hidden="true">MR</span>
+        <span>Mathew Regier</span>
+      </a>
+
+      <button class="nav-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="nav-menu" data-nav-toggle>
+        <span></span>
+        <span></span>
+      </button>
+
+      <div class="nav-menu" id="nav-menu" data-nav-menu>
+        <a href="#about">About</a>
+        <a href="#services">What I do</a>
+        <a href="#work">Work</a>
+        <a href="#skills">Skills</a>
+        <a href="#numbers">Numbers</a>
+        <a href="#contact">Contact</a>
+      </div>
     </nav>
+  </header>
 
-    <!-- Mobile Menu -->
-    <div id="mobile-menu" class="fixed inset-0 bg-dark-bg/95 backdrop-blur-lg z-40 hidden">
-        <div class="flex flex-col items-center justify-center h-full space-y-8 text-xl">
-            <a href="#hero" class="hover:text-neon-blue transition-colors duration-300">Home</a>
-            <a href="#competencies" class="hover:text-neon-blue transition-colors duration-300">Skills</a>
-            <a href="#programs" class="hover:text-neon-blue transition-colors duration-300">Programs</a>
-            <a href="#performance" class="hover:text-neon-blue transition-colors duration-300">Performance</a>
-            <a href="#websites" class="hover:text-neon-blue transition-colors duration-300">Websites</a>
-            <a href="#contact" class="hover:text-neon-blue transition-colors duration-300">Contact</a>
+  <main id="main">
+    <section class="hero section" id="top">
+      <div class="hero-grid shell">
+        <div class="hero-copy reveal">
+          <p class="eyebrow">Mathew Regier - Windsor, Ontario</p>
+          <h1>Hi, I'm Mathew. I help businesses get more leads and build the software that turns them into customers.</h1>
+          <p class="hero-lede">I work in two related lanes - marketing and software. Some clients hire me for one, some for both. Whatever the industry, the goal is usually the same: more qualified leads, faster follow-up, and systems that hold up after launch.</p>
+          <div class="hero-actions">
+            <a class="button primary" href="#services">See what I do</a>
+            <a class="button secondary" href="#contact">Get in touch</a>
+          </div>
         </div>
+
+        <div class="hero-panel reveal" aria-label="Quick highlights">
+          <div class="panel-topline">
+            <span>Recent highlights</span>
+            <span>2024 - 2026</span>
+          </div>
+          <div class="metric-orbit">
+            <div>
+              <strong>100K+</strong>
+              <span>SMS sent through systems I built</span>
+            </div>
+            <div>
+              <strong>3x</strong>
+              <span>Lead growth on a multi-year client</span>
+            </div>
+            <div>
+              <strong>75%</strong>
+              <span>Lower cost per lead vs industry</span>
+            </div>
+          </div>
+          <div class="signal-card">
+            <span class="signal-dot"></span>
+            <p>I care about response speed, clean data, and follow-up that actually happens. Most of my favourite work is invisible until you watch the leads roll in.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section tight" id="about" aria-labelledby="about-title">
+      <div class="shell">
+        <div class="section-heading reveal">
+          <p class="eyebrow">About me</p>
+          <h2 id="about-title">A little about how I got here.</h2>
+          <p>I'm a developer and marketer based in Windsor, Ontario. I started building websites when I was 9 - it was the first thing that really stuck. From there I got into game development, which is where I learned how to think in systems, ship things end-to-end, and obsess over how something feels to use.</p>
+          <p>Marketing came later. I picked it up almost by accident, got hooked on the strategy side of it, and pretty quickly realized the most interesting work happens at the intersection - where the campaigns, the software, and the data all meet. That's the lane I work in now: building the marketing systems and writing the software underneath them, usually on the same project.</p>
+          <p>I've worked across automotive retail, local services, gaming, and SaaS - because the underlying work transfers. If a business runs on leads, conversations, and follow-up, I can help.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="services" aria-labelledby="services-title">
+      <div class="shell">
+        <div class="section-heading reveal">
+          <p class="eyebrow">What I do</p>
+          <h2 id="services-title">Two sides of the same job.</h2>
+          <p>Most of my work falls into one of these two tracks. Pick the one that fits what you're trying to solve - or hire me for both, which is what most of my long-term clients end up doing.</p>
+        </div>
+
+        <div class="tracks">
+          <article class="track reveal">
+            <p class="track-tag">Track 01</p>
+            <h3>Marketing &amp; growth</h3>
+            <p>For teams that need more leads, better conversion, and campaigns that run end-to-end. I plan the strategy, write the copy, run the spend, and own the funnel.</p>
+            <ul class="track-list">
+              <li><strong>Lead generation</strong><span>Paid and organic campaigns built around a real funnel, not vanity metrics.</span></li>
+              <li><strong>Paid media</strong><span>Google Ads, Meta, and SMS campaigns I plan, write, and optimize.</span></li>
+              <li><strong>CRM &amp; follow-up</strong><span>GoHighLevel, LeadConnector, and custom workflows for nurture and reactivation.</span></li>
+              <li><strong>Conversion &amp; CRO</strong><span>Landing pages, offers, and on-site flows tuned to turn traffic into contacts.</span></li>
+              <li><strong>SEO &amp; analytics</strong><span>Attribution, UTM tracking, and reporting that actually answers questions.</span></li>
+            </ul>
+          </article>
+
+          <article class="track reveal">
+            <p class="track-tag">Track 02</p>
+            <h3>Software &amp; systems</h3>
+            <p>For teams that need real software built - websites, internal tools, integrations, AI features, and the platforms that hold everything together.</p>
+            <ul class="track-list">
+              <li><strong>Web &amp; product</strong><span>React, TypeScript, Next.js, and full-stack apps built to last.</span></li>
+              <li><strong>APIs &amp; integrations</strong><span>Connecting CRMs, payment, messaging, data, and third-party services cleanly.</span></li>
+              <li><strong>AI features</strong><span>Chat assistants, voice AI, SMS bots, and AI-assisted workflows wired into real products.</span></li>
+              <li><strong>Automation engines</strong><span>Custom Node and Python services that run the boring work in the background.</span></li>
+              <li><strong>Infra &amp; ops</strong><span>AWS, Railway, deployments, monitoring, and the glue that keeps it all online.</span></li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="work" aria-labelledby="work-title">
+      <div class="shell">
+        <div class="section-heading reveal">
+          <p class="eyebrow">Selected work</p>
+          <h2 id="work-title">Things I've built.</h2>
+          <p>A few projects I'm proud of, with the short version of what I did and what came out of it. The industries vary - the underlying work doesn't.</p>
+        </div>
+
+        <div class="project-grid">
+          <article class="project-card featured reveal">
+            <div class="project-meta">
+              <span>Featured project</span>
+              <span>Marketing + Software</span>
+            </div>
+            <h3>Rocky Motors</h3>
+            <p>I rebuilt an entire automotive retail platform from the ground up, then I ran the marketing on top of it. I wrote the React/TypeScript frontend and the Node/Express backend, designed the inventory system and CRM integrations, built the AI chat and lead automation, and run the paid and organic campaigns. The same approach would work for any local business that lives on leads and follow-up.</p>
+            <div class="project-stats">
+              <span><strong>100,000+</strong> lines of code I wrote</span>
+              <span><strong>4,000+</strong> monthly visitors</span>
+              <span><strong>300+</strong> organic leads/month</span>
+              <span><strong>7.5%</strong> conversion rate</span>
+            </div>
+          </article>
+
+          <article class="project-card reveal" id="evixie">
+            <div class="project-meta">
+              <span>Software</span>
+              <a href="https://www.evixie.com/" target="_blank" rel="noreferrer">evixie.com</a>
+            </div>
+            <h3>Evixie AI</h3>
+            <p>I'm building Evixie - an AI-powered CRM launching May 2026. It brings conversations, pipelines, AI-assisted replies, automated follow-ups, calling, and multi-location management into one place. The first verticals are dealerships, realtors, and warranty companies, but the platform is built to fit any sales team that lives in conversations.</p>
+            <ul class="clean-list">
+              <li>Unified inbox - every conversation in one place.</li>
+              <li>AI reply suggestions you actually review and send.</li>
+              <li>Drag-and-drop pipelines tailored to each industry.</li>
+              <li>Follow-ups that trigger on time, stage, or behaviour.</li>
+              <li>Built first for dealerships, realtors, and warranty teams.</li>
+            </ul>
+          </article>
+
+          <article class="project-card reveal">
+            <div class="project-meta">
+              <span>Marketing + Software</span>
+              <a href="https://www.newlookcurbs.com/" target="_blank" rel="noreferrer">newlookcurbs.com</a>
+            </div>
+            <h3>New Look Curbs</h3>
+            <p>A brand new site I just shipped for a stamped concrete curbing company in Windsor Essex County. Custom site, on-page SEO for local search, a quote-request flow tuned for mobile, and a portfolio gallery to show the craftsmanship. Built to convert local searches into 24-hour quote requests.</p>
+          </article>
+
+          <article class="project-card reveal">
+            <div class="project-meta">
+              <span>Marketing + Software</span>
+              <a href="https://www.extremecurbing.com/" target="_blank" rel="noreferrer">extremecurbing.com</a>
+            </div>
+            <h3>Extreme Curbing</h3>
+            <p>I designed and built the website for a local landscaping and cement curbing business. The goal was simple - show the work clearly, rank locally, and make it easy to request a quote from a phone. The same template works for any local service business.</p>
+          </article>
+
+          <article class="project-card reveal">
+            <div class="project-meta">
+              <span>Software</span>
+              <a href="https://peeposervers.com/" target="_blank" rel="noreferrer">peeposervers.com</a>
+            </div>
+            <h3>Peepo Servers</h3>
+            <p>A side project for hosting game servers and community events. I built the infrastructure, the site, and the tooling for running events with friends. Mostly an excuse to play with hosting, real-time systems, and gaming infra.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section dark-block" id="skills" aria-labelledby="skills-title">
+      <div class="shell systems-layout">
+        <div class="section-heading invert reveal">
+          <p class="eyebrow">What I work with</p>
+          <h2 id="skills-title">A short list of what I'm good at.</h2>
+          <p>I usually pick the right tool for the job rather than forcing a stack. These are the things I reach for most often, grouped roughly by what they're for.</p>
+        </div>
+
+        <div class="systems-grid">
+          <article class="system-card reveal">
+            <h3>Frontend</h3>
+            <p>React, TypeScript, Next.js, plain HTML and CSS, Tailwind, and shadcn/ui when it fits. I care about responsiveness, accessibility, and how a page actually feels to use.</p>
+          </article>
+          <article class="system-card reveal">
+            <h3>Backend &amp; data</h3>
+            <p>Node.js, Express, PHP, Python, MongoDB, MySQL, REST APIs, webhooks, AWS S3, Railway, and a lot of Google Sheets glue when speed matters more than elegance.</p>
+          </article>
+          <article class="system-card reveal">
+            <h3>Marketing &amp; CRM</h3>
+            <p>Google Ads, Meta, GoHighLevel and LeadConnector, Twilio A2P, SendGrid, attribution and UTM tracking, plus the campaign side of things - copy, landing pages, and offers.</p>
+          </article>
+          <article class="system-card reveal">
+            <h3>AI &amp; automation</h3>
+            <p>OpenAI, custom chat assistants, voice AI, SMS bots, and workflow automation - everything from qualifying leads to booking calls and handling follow-up.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="campaigns-title">
+      <div class="shell split">
+        <div class="section-heading reveal">
+          <p class="eyebrow">A few campaigns I've run</p>
+          <h2 id="campaigns-title">The kinds of things I like to design.</h2>
+          <p>Most of my favourite campaigns are simple ideas executed end-to-end. The examples below are from automotive, but the structure works in any business that takes inbound leads.</p>
+        </div>
+        <div class="playbook-list reveal">
+          <article>
+            <span>01</span>
+            <div>
+              <h3>Budget &amp; fit finder</h3>
+              <p>Visitors enter what they can afford and I show them options that match. Small idea, but it changes the kind of leads you get. Works for cars, homes, services, anything priced.</p>
+            </div>
+          </article>
+          <article>
+            <span>02</span>
+            <div>
+              <h3>Spin-to-win capture</h3>
+              <p>A compliant promo wheel I built to collect phone numbers without feeling spammy. It funnels straight into the SMS system. Useful any time you need a low-friction opt-in.</p>
+            </div>
+          </article>
+          <article>
+            <span>03</span>
+            <div>
+              <h3>Invite-only sale</h3>
+              <p>Gated, expiring-password campaigns that make people feel like insiders. Reply rates went up, and so did intent. Works for any limited-time offer.</p>
+            </div>
+          </article>
+          <article>
+            <span>04</span>
+            <div>
+              <h3>Lifecycle re-engagement</h3>
+              <p>Reaching out to past customers at the right point in their cycle - automated, personalized, and surprisingly effective. Trade-ins, renewals, refills, anything cyclical.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section proof" id="numbers" aria-labelledby="numbers-title">
+      <div class="shell">
+        <div class="section-heading reveal">
+          <p class="eyebrow">Numbers from real work</p>
+          <h2 id="numbers-title">Some results I'm proud of.</h2>
+          <p>Pulled from a multi-year client where I run both the marketing and the software. The numbers are specific to that business, but the systems and approach behind them work in any lead-driven environment.</p>
+        </div>
+
+        <div class="proof-grid reveal">
+          <article>
+            <span>Website</span>
+            <strong>300+</strong>
+            <p>Organic leads a month from around 4,000 monthly visitors.</p>
+          </article>
+          <article>
+            <span>Conversion</span>
+            <strong>7.5%</strong>
+            <p>Lead conversion rate, well above a ~2% industry average.</p>
+          </article>
+          <article>
+            <span>Google Ads</span>
+            <strong>$0.84</strong>
+            <p>Average CPC vs a $2.46 industry benchmark.</p>
+          </article>
+          <article>
+            <span>Cost per lead</span>
+            <strong>$4.44</strong>
+            <p>Average CPL vs a $17.50 benchmark.</p>
+          </article>
+          <article>
+            <span>SMS campaigns</span>
+            <strong>30K</strong>
+            <p>Cold messages a month generating around 9K replies.</p>
+          </article>
+          <article>
+            <span>Lead volume</span>
+            <strong>500</strong>
+            <p>Monthly leads from the SMS engine I built.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section contact" id="contact" aria-labelledby="contact-title">
+      <div class="shell contact-grid">
+        <div class="contact-copy reveal">
+          <p class="eyebrow">Contact</p>
+          <h2 id="contact-title">Want to talk?</h2>
+          <p>Whether you need marketing, software, both, or just have a question - I'd love to hear from you. Email is fastest, but the form works too.</p>
+          <div class="contact-methods">
+            <a href="mailto:MathewRegierMail@gmail.com">MathewRegierMail@gmail.com</a>
+            <a href="tel:+12269611073">(226) 961-1073</a>
+            <a href="https://www.linkedin.com/in/mathew-regier-396588288/" target="_blank" rel="noreferrer">LinkedIn</a>
+            <span>Windsor, Ontario</span>
+          </div>
+        </div>
+
+        <form class="contact-form reveal" id="contact-form">
+          <div class="form-row">
+            <label>
+              <span>Your name</span>
+              <input type="text" name="name" autocomplete="name" required>
+            </label>
+            <label>
+              <span>Your email</span>
+              <input type="email" name="email" autocomplete="email" required>
+            </label>
+          </div>
+          <label>
+            <span>Subject</span>
+            <input type="text" name="subject" required>
+          </label>
+          <label>
+            <span>Your message</span>
+            <textarea name="message" rows="5" required></textarea>
+          </label>
+          <button class="button primary form-button" id="submit-btn" type="submit">Send message</button>
+          <p class="form-status" role="status" aria-live="polite" data-form-status></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="shell footer-grid">
+      <p>&copy; 2026 Mathew Regier. Built and maintained by me.</p>
+      <a href="#top">Back to top</a>
     </div>
+  </footer>
 
-    <!-- Hero Section -->
-    <section id="hero" class="min-h-screen flex items-center justify-center relative overflow-hidden">
-        <!-- Hero Photo Background -->
-        <div class="absolute inset-0 bg-cover bg-no-repeat" style="background-image: url('assets/herophoto.jpeg'); background-position: 70% center;"></div>
-        <!-- Heavy Dark Overlay -->
-        <div class="absolute inset-0 bg-gradient-to-r from-black/85 via-dark-bg/90 to-black/85"></div>
-        <!-- Neon Gradient Overlay -->
-        <div class="absolute inset-0 bg-gradient-to-r from-neon-blue/10 via-transparent to-neon-purple/10"></div>
-        <div class="container mx-auto px-4 z-10">
-            <div class="text-center max-w-4xl mx-auto">
-                <div class="mb-8" data-aos="fade-down" data-aos-duration="1000">
-                    <h1 class="text-4xl sm:text-6xl md:text-8xl font-bold mb-4 bg-gradient-to-r from-neon-blue via-white to-neon-purple bg-clip-text text-transparent animate-gradient-shift leading-tight max-w-full">
-                        MATHEW REGIER
-                    </h1>
-                    <div class="text-lg sm:text-xl md:text-2xl text-gray-300 mb-6 animate-fade-in-up px-4">
-                        <span class="text-neon-green">Marketing Automation</span> • 
-                        <span class="text-neon-blue">AI Integration</span> • 
-                        <span class="text-neon-purple">Sales Technology</span>
-                    </div>
-                </div>
-                
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12" data-aos="fade-up" data-aos-delay="50">
-                    <div class="bg-dark-card/50 backdrop-blur-sm border border-neon-blue/30 rounded-xl p-6 hover:border-neon-blue/60 transition-all duration-300 hover:scale-105">
-                        <div class="text-3xl text-neon-blue mb-2">1000+</div>
-                        <div class="text-gray-300">Leads/Month</div>
-                    </div>
-                    <div class="bg-dark-card/50 backdrop-blur-sm border border-neon-green/30 rounded-xl p-6 hover:border-neon-green/60 transition-all duration-300 hover:scale-105">
-                        <div class="text-3xl text-neon-green mb-2">100K</div>
-                        <div class="text-gray-300">SMS/Month</div>
-                    </div>
-                    <div class="bg-dark-card/50 backdrop-blur-sm border border-neon-purple/30 rounded-xl p-6 hover:border-neon-purple/60 transition-all duration-300 hover:scale-105">
-                        <div class="text-3xl text-neon-purple mb-2">75%</div>
-                        <div class="text-gray-300">Lower Cost Per Lead</div>
-                    </div>
-                </div>
-
-                
-                <!-- Action Buttons -->
-                <div class="flex flex-col sm:flex-row gap-4 justify-center items-center px-4" data-aos="fade-up" data-aos-delay="150">
-                    <a href="/rocky-motors" class="inline-flex items-center px-6 sm:px-8 py-3 sm:py-4 bg-gradient-to-r from-neon-blue to-neon-purple rounded-full font-semibold text-white hover:shadow-lg hover:shadow-neon-blue/50 transition-all duration-300 transform hover:scale-105 text-sm sm:text-base w-full sm:w-auto text-center">
-                        <i class="fas fa-star mr-2 sm:mr-3"></i>
-                        View My Best Work
-                    </a>
-                    <a href="#performance" class="inline-flex items-center px-6 sm:px-8 py-3 sm:py-4 bg-gradient-to-r from-neon-green to-neon-blue rounded-full font-semibold text-white hover:shadow-lg hover:shadow-neon-green/50 transition-all duration-300 transform hover:scale-105 text-sm sm:text-base w-full sm:w-auto text-center">
-                        <i class="fas fa-chart-line mr-2 sm:mr-3"></i>
-                        Performance
-                    </a>
-                    <a href="#contact" class="inline-flex items-center px-6 sm:px-8 py-3 sm:py-4 border-2 border-neon-green rounded-full font-semibold text-neon-green hover:bg-neon-green hover:text-black transition-all duration-300 transform hover:scale-105 text-sm sm:text-base w-full sm:w-auto text-center">
-                        <i class="fas fa-envelope mr-2 sm:mr-3"></i>
-                        Contact Me
-                    </a>
-                </div>
-            </div>
-        </div>
-
-        <!-- Floating Elements -->
-        <div class="hidden md:block absolute top-20 left-10 w-20 h-20 border border-neon-blue/30 rounded-full animate-float"></div>
-        <div class="hidden md:block absolute bottom-20 right-10 w-16 h-16 border border-neon-purple/30 rounded-full animate-float" style="animation-delay: -2s;"></div>
-        <div class="hidden lg:block absolute top-1/2 left-20 w-12 h-12 border border-neon-green/30 rounded-full animate-float" style="animation-delay: -4s;"></div>
-    </section>
-
-    <!-- Core Competencies -->
-    <section id="competencies" class="py-20 relative">
-        <div class="container mx-auto px-4">
-            <div class="text-center mb-16" data-aos="fade-up">
-                <h2 class="text-5xl font-bold mb-4 bg-gradient-to-r from-neon-green to-neon-blue bg-clip-text text-transparent">
-                    Core Competencies
-                </h2>
-                <p class="text-xl text-gray-400 max-w-2xl mx-auto">
-                    Specialized expertise in automotive retail marketing automation
-                </p>
-            </div>
-
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
-                <!-- Performance Marketing -->
-                <div class="group bg-dark-card/50 backdrop-blur-sm border border-gray-700 rounded-xl p-6 hover:border-neon-blue/60 transition-all duration-300 hover:scale-105" data-aos="fade-up" data-aos-delay="50">
-                    <div class="text-center">
-                        <div class="w-16 h-16 mx-auto mb-4 bg-gradient-to-r from-neon-blue to-neon-purple rounded-full flex items-center justify-center">
-                            <i class="fas fa-chart-line text-2xl text-white"></i>
-                        </div>
-                        <h3 class="text-xl font-semibold mb-3 text-neon-blue">Performance Marketing</h3>
-                        <p class="text-gray-400 mb-4">Tripled qualified leads with custom SMS engine & optimized ad campaigns</p>
-                        <div class="space-y-2">
-                            <div class="flex justify-between">
-                                <span class="text-sm">Lead Generation</span>
-                                <span class="text-neon-green">3x Growth</span>
-                            </div>
-                            <div class="w-full bg-gray-700 rounded-full h-2">
-                                <div class="bg-gradient-to-r from-neon-green to-neon-blue h-2 rounded-full w-full animate-pulse-glow"></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- CRM Architecture -->
-                <div class="group bg-dark-card/50 backdrop-blur-sm border border-gray-700 rounded-xl p-6 hover:border-neon-green/60 transition-all duration-300 hover:scale-105" data-aos="fade-up" data-aos-delay="75">
-                    <div class="text-center">
-                        <div class="w-16 h-16 mx-auto mb-4 bg-gradient-to-r from-neon-green to-neon-blue rounded-full flex items-center justify-center">
-                            <i class="fas fa-database text-2xl text-white"></i>
-                        </div>
-                        <h3 class="text-xl font-semibold mb-3 text-neon-green">CRM Architecture</h3>
-                        <p class="text-gray-400 mb-4">GoHighLevel/LeadConnector integration with attribution tracking</p>
-                        <div class="space-y-2">
-                            <div class="flex justify-between">
-                                <span class="text-sm">Lead Sync</span>
-                                <span class="text-neon-blue">&lt;1 min</span>
-                            </div>
-                            <div class="w-full bg-gray-700 rounded-full h-2">
-                                <div class="bg-gradient-to-r from-neon-blue to-neon-green h-2 rounded-full w-full animate-pulse-glow"></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- AI Agents -->
-                <div class="group bg-dark-card/50 backdrop-blur-sm border border-gray-700 rounded-xl p-6 hover:border-neon-purple/60 transition-all duration-300 hover:scale-105" data-aos="fade-up" data-aos-delay="50">
-                    <div class="text-center">
-                        <div class="w-16 h-16 mx-auto mb-4 bg-gradient-to-r from-neon-purple to-neon-pink rounded-full flex items-center justify-center">
-                            <i class="fas fa-robot text-2xl text-white"></i>
-                        </div>
-                        <h3 class="text-xl font-semibold mb-3 text-neon-purple">AI Chatbots</h3>
-                        <p class="text-gray-400 mb-4">10+ smart chatbots cutting response time 70% & lifting appointments 18%</p>
-                        <div class="space-y-2">
-                            <div class="flex justify-between">
-                                <span class="text-sm">Response Time</span>
-                                <span class="text-neon-pink">-70%</span>
-                            </div>
-                            <div class="w-full bg-gray-700 rounded-full h-2">
-                                <div class="bg-gradient-to-r from-neon-purple to-neon-pink h-2 rounded-full w-4/5 animate-pulse-glow"></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Web Development -->
-                <div class="group bg-dark-card/50 backdrop-blur-sm border border-gray-700 rounded-xl p-6 hover:border-neon-blue/60 transition-all duration-300 hover:scale-105" data-aos="fade-up" data-aos-delay="100">
-                    <div class="text-center">
-                        <div class="w-16 h-16 mx-auto mb-4 bg-gradient-to-r from-neon-blue to-neon-green rounded-full flex items-center justify-center">
-                            <i class="fas fa-code text-2xl text-white"></i>
-                        </div>
-                        <h3 class="text-xl font-semibold mb-3 text-neon-blue">Full-Stack Development</h3>
-                        <p class="text-gray-400 mb-4">Re-engineered RockyMotors.com with React/TypeScript + Node.js/Express</p>
-                        <div class="space-y-2">
-                            <div class="flex justify-between">
-                                <span class="text-sm">Time Saved</span>
-                                <span class="text-neon-green">100+ hrs/week</span>
-                            </div>
-                            <div class="w-full bg-gray-700 rounded-full h-2">
-                                <div class="bg-gradient-to-r from-neon-green to-neon-blue h-2 rounded-full w-full animate-pulse-glow"></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- SEO & CRO -->
-                <div class="group bg-dark-card/50 backdrop-blur-sm border border-gray-700 rounded-xl p-6 hover:border-neon-green/60 transition-all duration-300 hover:scale-105" data-aos="fade-up" data-aos-delay="125">
-                    <div class="text-center">
-                        <div class="w-16 h-16 mx-auto mb-4 bg-gradient-to-r from-neon-green to-neon-purple rounded-full flex items-center justify-center">
-                            <i class="fas fa-search text-2xl text-white"></i>
-                        </div>
-                        <h3 class="text-xl font-semibold mb-3 text-neon-green">SEO & CRO</h3>
-                        <p class="text-gray-400 mb-4">Capturing contact info from 25% of visitors, converting browsers to leads</p>
-                        <div class="space-y-2">
-                            <div class="flex justify-between">
-                                <span class="text-sm">Visitor Conversion</span>
-                                <span class="text-neon-blue">25%</span>
-                            </div>
-                            <div class="w-full bg-gray-700 rounded-full h-2">
-                                <div class="bg-gradient-to-r from-neon-blue to-neon-purple h-2 rounded-full w-3/4 animate-pulse-glow"></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Automation -->
-                <div class="group bg-dark-card/50 backdrop-blur-sm border border-gray-700 rounded-xl p-6 hover:border-neon-purple/60 transition-all duration-300 hover:scale-105" data-aos="fade-up" data-aos-delay="150">
-                    <div class="text-center">
-                        <div class="w-16 h-16 mx-auto mb-4 bg-gradient-to-r from-neon-purple to-neon-blue rounded-full flex items-center justify-center">
-                            <i class="fas fa-cogs text-2xl text-white"></i>
-                        </div>
-                        <h3 class="text-xl font-semibold mb-3 text-neon-purple">Automation at Scale</h3>
-                        <p class="text-gray-400 mb-4">Follow-ups, notifications, nurture campaigns</p>
-                        <div class="space-y-2">
-                            <div class="flex justify-between">
-                                <span class="text-sm">Automations</span>
-                                <span class="text-neon-pink">100+</span>
-                            </div>
-                            <div class="w-full bg-gray-700 rounded-full h-2">
-                                <div class="bg-gradient-to-r from-neon-pink to-neon-purple h-2 rounded-full w-full animate-pulse-glow"></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Signature Programs -->
-    <section id="programs" class="py-20 bg-gradient-to-r from-dark-accent/20 to-transparent">
-        <div class="container mx-auto px-4">
-            <div class="text-center mb-16" data-aos="fade-up">
-                <h2 class="text-5xl font-bold mb-4 bg-gradient-to-r from-neon-purple to-neon-pink bg-clip-text text-transparent">
-                    Signature Programs & Systems
-                </h2>
-                <p class="text-xl text-gray-400 max-w-3xl mx-auto">
-                    Custom-built solutions that drive results at scale
-                </p>
-            </div>
-
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8 mb-16">
-                <!-- Bulk SMS Engine -->
-                <div class="bg-dark-card/70 backdrop-blur-sm border border-neon-blue/30 rounded-xl p-8 hover:border-neon-blue/60 transition-all duration-300" data-aos="fade-right">
-                    <div class="flex items-center mb-6">
-                        <div class="w-12 h-12 bg-gradient-to-r from-neon-blue to-neon-green rounded-full flex items-center justify-center mr-4">
-                            <i class="fas fa-sms text-xl text-white"></i>
-                        </div>
-                        <h3 class="text-2xl font-semibold text-neon-blue">Custom SMS Engine</h3>
-                    </div>
-                    <p class="text-gray-300 mb-6">Non-VoIP bulk-SMS engine (Node.js + Twilio) that tripled qualified leads</p>
-                    
-                    <!-- Animated Counter -->
-                    <div class="bg-dark-bg/50 rounded-lg p-6 mb-6">
-                        <div class="grid grid-cols-2 gap-4 text-center">
-                            <div>
-                                <div class="text-3xl font-bold text-neon-green mb-2">100K</div>
-                                <div class="text-gray-400">SMS/Month</div>
-                            </div>
-                            <div>
-                                <div class="text-3xl font-bold text-neon-blue mb-2">30%</div>
-                                <div class="text-gray-400">Reply Rate</div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="grid grid-cols-2 gap-4">
-                        <div class="text-center">
-                            <div class="text-xl font-semibold text-neon-blue">AI-Assisted</div>
-                            <div class="text-gray-400">Messaging</div>
-                        </div>
-                        <div class="text-center">
-                            <div class="text-xl font-semibold text-neon-green">3x Leads</div>
-                            <div class="text-gray-400">Growth</div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Free SMS Solution -->
-                <div class="bg-dark-card/70 backdrop-blur-sm border border-neon-green/30 rounded-xl p-8 hover:border-neon-green/60 transition-all duration-300" data-aos="fade-left">
-                    <div class="flex items-center mb-6">
-                        <div class="w-12 h-12 bg-gradient-to-r from-neon-green to-neon-blue rounded-full flex items-center justify-center mr-4">
-                            <i class="fas fa-mobile-alt text-xl text-white"></i>
-                        </div>
-                        <h3 class="text-2xl font-semibold text-neon-green">Free SMS Solution</h3>
-                    </div>
-                    <p class="text-gray-300 mb-6">Custom-built cost-controlled SMS solution for marketing tests and campaigns</p>
-                    
-                    <!-- Performance Metrics -->
-                    <div class="bg-dark-bg/50 rounded-lg p-6 mb-6">
-                        <div class="grid grid-cols-2 gap-4 text-center">
-                            <div>
-                                <div class="text-3xl font-bold text-neon-green mb-2">15K</div>
-                                <div class="text-gray-400">SMS/Month</div>
-                            </div>
-                            <div>
-                                <div class="text-3xl font-bold text-neon-blue mb-2">100%</div>
-                                <div class="text-gray-400">Cost Control</div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="grid grid-cols-2 gap-4">
-                        <div class="text-center">
-                            <div class="text-xl font-semibold text-neon-green">Custom Built</div>
-                            <div class="text-gray-400">Solution</div>
-                        </div>
-                        <div class="text-center">
-                            <div class="text-xl font-semibold text-neon-blue">Marketing</div>
-                            <div class="text-gray-400">Testing</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Additional Programs Grid -->
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                <!-- API Integration -->
-                <div class="bg-dark-card/50 backdrop-blur-sm border border-neon-purple/30 rounded-xl p-6 hover:border-neon-purple/60 transition-all duration-300 hover:scale-105" data-aos="fade-up" data-aos-delay="50">
-                    <div class="text-center">
-                        <div class="w-16 h-16 mx-auto mb-4 bg-gradient-to-r from-neon-purple to-neon-pink rounded-full flex items-center justify-center">
-                            <i class="fas fa-plug text-2xl text-white"></i>
-                        </div>
-                        <h3 class="text-xl font-semibold mb-3 text-neon-purple">API Integration</h3>
-                        <p class="text-gray-400 mb-4">50+ external APIs integrated: finance, VIN decode, payments, credit bureaus</p>
-                        <div class="bg-dark-bg/50 rounded-lg p-3">
-                            <div class="text-neon-pink font-semibold">50+ APIs</div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- CRM Automation -->
-                <div class="bg-dark-card/50 backdrop-blur-sm border border-neon-blue/30 rounded-xl p-6 hover:border-neon-blue/60 transition-all duration-300 hover:scale-105" data-aos="fade-up" data-aos-delay="75">
-                    <div class="text-center">
-                        <div class="w-16 h-16 mx-auto mb-4 bg-gradient-to-r from-neon-blue to-neon-green rounded-full flex items-center justify-center">
-                            <i class="fas fa-cogs text-2xl text-white"></i>
-                        </div>
-                        <h3 class="text-xl font-semibold mb-3 text-neon-blue">CRM Automation</h3>
-                        <p class="text-gray-400 mb-4">100+ automated workflows: nurture, loyalty, reviews, trade-ins, alerts</p>
-                        <div class="bg-dark-bg/50 rounded-lg p-3">
-                            <div class="text-neon-green font-semibold">100+ Workflows</div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- AWS Optimization -->
-                <div class="bg-dark-card/50 backdrop-blur-sm border border-neon-green/30 rounded-xl p-6 hover:border-neon-green/60 transition-all duration-300 hover:scale-105" data-aos="fade-up" data-aos-delay="50">
-                    <div class="text-center">
-                        <div class="w-16 h-16 mx-auto mb-4 bg-gradient-to-r from-neon-green to-neon-purple rounded-full flex items-center justify-center">
-                            <i class="fab fa-aws text-2xl text-white"></i>
-                        </div>
-                        <h3 class="text-xl font-semibold mb-3 text-neon-green">AWS Optimization</h3>
-                        <p class="text-gray-400 mb-4">Optimized media delivery via S3 signed URLs, boosting Core Web Vitals</p>
-                        <div class="bg-dark-bg/50 rounded-lg p-3">
-                            <div class="text-neon-blue font-semibold">Core Web Vitals</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Campaign Playbooks -->
-    <section class="py-20">
-        <div class="container mx-auto px-4">
-            <div class="text-center mb-16" data-aos="fade-up">
-                <h2 class="text-5xl font-bold mb-4 bg-gradient-to-r from-neon-blue to-neon-green bg-clip-text text-transparent">
-                    Campaign Playbooks
-                </h2>
-                <p class="text-xl text-gray-400 max-w-3xl mx-auto">
-                    Proven strategies with documented outcomes
-                </p>
-            </div>
-
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-                <!-- Budget Finder -->
-                <div class="group bg-dark-card/50 backdrop-blur-sm border border-gray-700 rounded-xl p-6 hover:border-neon-blue/60 transition-all duration-300 hover:scale-105 cursor-pointer" data-aos="fade-up" data-aos-delay="50">
-                    <div class="flex items-center mb-4">
-                        <div class="w-10 h-10 bg-gradient-to-r from-neon-blue to-neon-green rounded-full flex items-center justify-center mr-3">
-                            <span class="text-white font-bold">1</span>
-                        </div>
-                        <h3 class="text-xl font-semibold text-neon-blue">Budget Finder</h3>
-                    </div>
-                    <p class="text-gray-400 mb-4">Converts bi-weekly budget into matching inventory</p>
-                    <div class="flex items-center justify-between">
-                        <span class="text-sm text-gray-500">Problem → Build → Outcome</span>
-                        <i class="fas fa-arrow-right text-neon-blue group-hover:translate-x-2 transition-transform duration-300"></i>
-                    </div>
-                </div>
-
-                <!-- Spin-to-Win -->
-                <div class="group bg-dark-card/50 backdrop-blur-sm border border-gray-700 rounded-xl p-6 hover:border-neon-green/60 transition-all duration-300 hover:scale-105 cursor-pointer" data-aos="fade-up" data-aos-delay="75">
-                    <div class="flex items-center mb-4">
-                        <div class="w-10 h-10 bg-gradient-to-r from-neon-green to-neon-purple rounded-full flex items-center justify-center mr-3">
-                            <span class="text-white font-bold">2</span>
-                        </div>
-                        <h3 class="text-xl font-semibold text-neon-green">Spin-to-Win Capture</h3>
-                    </div>
-                    <p class="text-gray-400 mb-4">Compliant promo wheel to collect phone numbers</p>
-                    <div class="flex items-center justify-between">
-                        <span class="text-sm text-gray-500">Problem → Build → Outcome</span>
-                        <i class="fas fa-arrow-right text-neon-green group-hover:translate-x-2 transition-transform duration-300"></i>
-                    </div>
-                </div>
-
-                <!-- Invite-Only Sale -->
-                <div class="group bg-dark-card/50 backdrop-blur-sm border border-gray-700 rounded-xl p-6 hover:border-neon-purple/60 transition-all duration-300 hover:scale-105 cursor-pointer" data-aos="fade-up" data-aos-delay="50">
-                    <div class="flex items-center mb-4">
-                        <div class="w-10 h-10 bg-gradient-to-r from-neon-purple to-neon-pink rounded-full flex items-center justify-center mr-3">
-                            <span class="text-white font-bold">3</span>
-                        </div>
-                        <h3 class="text-xl font-semibold text-neon-purple">Invite-Only Sale</h3>
-                    </div>
-                    <p class="text-gray-400 mb-4">Gated, expiring-password list with high reply rates</p>
-                    <div class="flex items-center justify-between">
-                        <span class="text-sm text-gray-500">Problem → Build → Outcome</span>
-                        <i class="fas fa-arrow-right text-neon-purple group-hover:translate-x-2 transition-transform duration-300"></i>
-                    </div>
-                </div>
-
-                <!-- No Payments -->
-                <div class="group bg-dark-card/50 backdrop-blur-sm border border-gray-700 rounded-xl p-6 hover:border-neon-blue/60 transition-all duration-300 hover:scale-105 cursor-pointer" data-aos="fade-up" data-aos-delay="100">
-                    <div class="flex items-center mb-4">
-                        <div class="w-10 h-10 bg-gradient-to-r from-neon-blue to-neon-green rounded-full flex items-center justify-center mr-3">
-                            <span class="text-white font-bold">4</span>
-                        </div>
-                        <h3 class="text-xl font-semibold text-neon-blue">No-Payments Campaign</h3>
-                    </div>
-                    <p class="text-gray-400 mb-4">Urgency + affordability framing (OAC)</p>
-                    <div class="flex items-center justify-between">
-                        <span class="text-sm text-gray-500">Problem → Build → Outcome</span>
-                        <i class="fas fa-arrow-right text-neon-blue group-hover:translate-x-2 transition-transform duration-300"></i>
-                    </div>
-                </div>
-
-                <!-- Small-Town Targeting -->
-                <div class="group bg-dark-card/50 backdrop-blur-sm border border-gray-700 rounded-xl p-6 hover:border-neon-green/60 transition-all duration-300 hover:scale-105 cursor-pointer" data-aos="fade-up" data-aos-delay="125">
-                    <div class="flex items-center mb-4">
-                        <div class="w-10 h-10 bg-gradient-to-r from-neon-green to-neon-purple rounded-full flex items-center justify-center mr-3">
-                            <span class="text-white font-bold">5</span>
-                        </div>
-                        <h3 class="text-xl font-semibold text-neon-green">Small-Town Targeting</h3>
-                    </div>
-                    <p class="text-gray-400 mb-4">"People travel to Windsor for approvals" angle</p>
-                    <div class="flex items-center justify-between">
-                        <span class="text-sm text-gray-500">Problem → Build → Outcome</span>
-                        <i class="fas fa-arrow-right text-neon-green group-hover:translate-x-2 transition-transform duration-300"></i>
-                    </div>
-                </div>
-
-                <!-- Trade-In/Upgrade -->
-                <div class="group bg-dark-card/50 backdrop-blur-sm border border-gray-700 rounded-xl p-6 hover:border-neon-purple/60 transition-all duration-300 hover:scale-105 cursor-pointer" data-aos="fade-up" data-aos-delay="150">
-                    <div class="flex items-center mb-4">
-                        <div class="w-10 h-10 bg-gradient-to-r from-neon-purple to-neon-pink rounded-full flex items-center justify-center mr-3">
-                            <span class="text-white font-bold">6</span>
-                        </div>
-                        <h3 class="text-xl font-semibold text-neon-purple">Trade-In/Upgrade</h3>
-                    </div>
-                    <p class="text-gray-400 mb-4">Lifecycle re-engagement of past buyers</p>
-                    <div class="flex items-center justify-between">
-                        <span class="text-sm text-gray-500">Problem → Build → Outcome</span>
-                        <i class="fas fa-arrow-right text-neon-purple group-hover:translate-x-2 transition-transform duration-300"></i>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- AI Assistants -->
-    <section class="py-20 bg-gradient-to-r from-dark-accent/20 to-transparent">
-        <div class="container mx-auto px-4">
-            <div class="text-center mb-16" data-aos="fade-up">
-                <h2 class="text-5xl font-bold mb-4 bg-gradient-to-r from-neon-purple to-neon-blue bg-clip-text text-transparent">
-                    AI Assistants Deployed
-                </h2>
-                <p class="text-xl text-gray-400 max-w-3xl mx-auto">
-                    Custom AI agents handling qualification, escalation, and customer engagement
-                </p>
-            </div>
-
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
-                <!-- Stacey -->
-                <div class="bg-dark-card/70 backdrop-blur-sm border border-neon-blue/30 rounded-xl p-6 lg:p-8 hover:border-neon-blue/60 transition-all duration-300 hover:scale-105" data-aos="fade-up" data-aos-delay="50">
-                    <div class="text-center">
-                        <div class="w-20 h-20 mx-auto mb-6 bg-gradient-to-r from-neon-blue to-neon-green rounded-full flex items-center justify-center">
-                            <i class="fas fa-user-tie text-3xl text-white"></i>
-                        </div>
-                        <h3 class="text-2xl font-semibold mb-3 text-neon-blue">Stacey</h3>
-                        <p class="text-gray-400 mb-4">Sales assistant specializing in pricing etiquette and interest detection</p>
-                        <div class="space-y-3">
-                            <div class="bg-dark-bg/50 rounded-lg p-3">
-                                <div class="text-sm text-neon-green">✓ Pricing Etiquette</div>
-                            </div>
-                            <div class="bg-dark-bg/50 rounded-lg p-3">
-                                <div class="text-sm text-neon-blue">✓ Interest Detection</div>
-                            </div>
-                            <div class="bg-dark-bg/50 rounded-lg p-3">
-                                <div class="text-sm text-neon-purple">✓ Smart Escalation</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Maggie -->
-                <div class="bg-dark-card/70 backdrop-blur-sm border border-neon-green/30 rounded-xl p-8 hover:border-neon-green/60 transition-all duration-300 hover:scale-105" data-aos="fade-up" data-aos-delay="75">
-                    <div class="text-center">
-                        <div class="w-20 h-20 mx-auto mb-6 bg-gradient-to-r from-neon-green to-neon-purple rounded-full flex items-center justify-center">
-                            <i class="fas fa-key text-3xl text-white"></i>
-                        </div>
-                        <h3 class="text-2xl font-semibold mb-3 text-neon-green">Maggie</h3>
-                        <p class="text-gray-400 mb-4">Private inventory assistant with password-protected financing flows</p>
-                        <div class="space-y-3">
-                            <div class="bg-dark-bg/50 rounded-lg p-3">
-                                <div class="text-sm text-neon-blue">✓ Private Inventory</div>
-                            </div>
-                            <div class="bg-dark-bg/50 rounded-lg p-3">
-                                <div class="text-sm text-neon-green">✓ Password Gate</div>
-                            </div>
-                            <div class="bg-dark-bg/50 rounded-lg p-3">
-                                <div class="text-sm text-neon-purple">✓ Financing Requests</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Billy -->
-                <div class="bg-dark-card/70 backdrop-blur-sm border border-neon-purple/30 rounded-xl p-8 hover:border-neon-purple/60 transition-all duration-300 hover:scale-105" data-aos="fade-up" data-aos-delay="50">
-                    <div class="text-center">
-                        <div class="w-20 h-20 mx-auto mb-6 bg-gradient-to-r from-neon-purple to-neon-pink rounded-full flex items-center justify-center">
-                            <i class="fas fa-phone text-3xl text-white"></i>
-                        </div>
-                        <h3 class="text-2xl font-semibold mb-3 text-neon-purple">Billy</h3>
-                        <p class="text-gray-400 mb-4">Human-style warmer that books real calls with prospects</p>
-                        <div class="space-y-3">
-                            <div class="bg-dark-bg/50 rounded-lg p-3">
-                                <div class="text-sm text-neon-pink">✓ Human-Style Warm-Up</div>
-                            </div>
-                            <div class="bg-dark-bg/50 rounded-lg p-3">
-                                <div class="text-sm text-neon-blue">✓ Call Booking</div>
-                            </div>
-                            <div class="bg-dark-bg/50 rounded-lg p-3">
-                                <div class="text-sm text-neon-green">✓ Dedicated Site</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Mike -->
-                <div class="bg-dark-card/70 backdrop-blur-sm border border-neon-blue/30 rounded-xl p-8 hover:border-neon-blue/60 transition-all duration-300 hover:scale-105" data-aos="fade-up" data-aos-delay="100">
-                    <div class="text-center">
-                        <div class="w-20 h-20 mx-auto mb-6 bg-gradient-to-r from-neon-blue to-neon-green rounded-full flex items-center justify-center">
-                            <i class="fas fa-store text-3xl text-white"></i>
-                        </div>
-                        <h3 class="text-2xl font-semibold mb-3 text-neon-blue">Mike</h3>
-                        <p class="text-gray-400 mb-4">Retail assistant for N4E1 handling inventory and store hours</p>
-                        <div class="space-y-3">
-                            <div class="bg-dark-bg/50 rounded-lg p-3">
-                                <div class="text-sm text-neon-green">✓ Inventory Queries</div>
-                            </div>
-                            <div class="bg-dark-bg/50 rounded-lg p-3">
-                                <div class="text-sm text-neon-blue">✓ Store Information</div>
-                            </div>
-                            <div class="bg-dark-bg/50 rounded-lg p-3">
-                                <div class="text-sm text-neon-purple">✓ Customer Support</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Auction Bot -->
-                <div class="bg-dark-card/70 backdrop-blur-sm border border-neon-green/30 rounded-xl p-8 hover:border-neon-green/60 transition-all duration-300 hover:scale-105" data-aos="fade-up" data-aos-delay="125">
-                    <div class="text-center">
-                        <div class="w-20 h-20 mx-auto mb-6 bg-gradient-to-r from-neon-green to-neon-purple rounded-full flex items-center justify-center">
-                            <i class="fas fa-gavel text-3xl text-white"></i>
-                        </div>
-                        <h3 class="text-2xl font-semibold mb-3 text-neon-green">Auction Bot</h3>
-                        <p class="text-gray-400 mb-4">Real-estate outreach for pre/post auction windows</p>
-                        <div class="space-y-3">
-                            <div class="bg-dark-bg/50 rounded-lg p-3">
-                                <div class="text-sm text-neon-blue">✓ Pre-Auction Outreach</div>
-                            </div>
-                            <div class="bg-dark-bg/50 rounded-lg p-3">
-                                <div class="text-sm text-neon-green">✓ Post-Auction Follow-up</div>
-                            </div>
-                            <div class="bg-dark-bg/50 rounded-lg p-3">
-                                <div class="text-sm text-neon-purple">✓ Excess Funds</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Performance Metrics -->
-    <section id="performance" class="py-20">
-        <div class="container mx-auto px-4">
-            <div class="text-center mb-16" data-aos="fade-up">
-                <h2 class="text-5xl font-bold mb-4 bg-gradient-to-r from-neon-green to-neon-blue bg-clip-text text-transparent">
-                    Performance Benchmarks
-                </h2>
-                <p class="text-xl text-gray-400 max-w-3xl mx-auto">
-                    Industry-leading metrics that drive real business results
-                </p>
-            </div>
-
-            <!-- Website Performance -->
-            <div class="mb-16" data-aos="fade-up">
-                <h3 class="text-3xl font-bold text-center mb-8 text-neon-green">Average Website Performance</h3>
-                <div class="bg-dark-card/70 backdrop-blur-sm border border-neon-green/30 rounded-xl p-8">
-                    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                        <!-- Organic Leads Performance -->
-                        <div class="text-center">
-                            <h4 class="text-2xl font-semibold mb-6 text-neon-green">Organic Leads per Month</h4>
-                            <div class="space-y-6">
-                                <div class="bg-dark-bg/50 rounded-lg p-6 border border-neon-green/30">
-                                    <div class="text-4xl font-bold text-neon-green mb-2">300+</div>
-                                    <div class="text-lg text-gray-300">My Monthly Leads</div>
-                                </div>
-                                <div class="text-2xl text-gray-400">vs</div>
-                                <div class="bg-dark-bg/50 rounded-lg p-6 border border-gray-600">
-                                    <div class="text-4xl font-bold text-gray-400 mb-2">48-228</div>
-                                    <div class="text-lg text-gray-400">Industry Range</div>
-                                </div>
-                                <div class="bg-gradient-to-r from-neon-green to-neon-blue rounded-lg p-4">
-                                    <div class="text-2xl font-bold text-white">Exceptional</div>
-                                    <div class="text-sm text-gray-200">Above Large Dealers</div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Conversion Rate Performance -->
-                        <div class="text-center">
-                            <h4 class="text-2xl font-semibold mb-6 text-neon-blue">Lead Conversion Rate</h4>
-                            <div class="space-y-6">
-                                <div class="bg-dark-bg/50 rounded-lg p-6 border border-neon-green/30">
-                                    <div class="text-4xl font-bold text-neon-green mb-2">7.5%</div>
-                                    <div class="text-lg text-gray-300">My Conversion</div>
-                                </div>
-                                <div class="text-2xl text-gray-400">vs</div>
-                                <div class="bg-dark-bg/50 rounded-lg p-6 border border-gray-600">
-                                    <div class="text-4xl font-bold text-gray-400 mb-2">2%</div>
-                                    <div class="text-lg text-gray-400">Industry Average</div>
-                                </div>
-                                <div class="bg-gradient-to-r from-neon-blue to-neon-purple rounded-lg p-4">
-                                    <div class="text-2xl font-bold text-white">275% Higher</div>
-                                    <div class="text-sm text-gray-200">Very Strong Performance</div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- User Engagement Performance -->
-                        <div class="text-center">
-                            <h4 class="text-2xl font-semibold mb-6 text-neon-purple">User Engagement</h4>
-                            <div class="space-y-6">
-                                <div class="bg-dark-bg/50 rounded-lg p-6 border border-neon-green/30">
-                                    <div class="text-4xl font-bold text-neon-green mb-2">70%</div>
-                                    <div class="text-lg text-gray-300">My Page Progression</div>
-                                </div>
-                                <div class="text-2xl text-gray-400">vs</div>
-                                <div class="bg-dark-bg/50 rounded-lg p-6 border border-gray-600">
-                                    <div class="text-4xl font-bold text-gray-400 mb-2">20%</div>
-                                    <div class="text-lg text-gray-400">Industry Average</div>
-                                </div>
-                                <div class="bg-gradient-to-r from-neon-purple to-neon-pink rounded-lg p-4">
-                                    <div class="text-2xl font-bold text-white">250% Higher</div>
-                                    <div class="text-sm text-gray-200">Qualified Lead Behavior</div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <!-- Additional Performance Summary -->
-                    <div class="mt-8 bg-dark-bg/30 rounded-lg p-6">
-                        <div class="text-center mb-6">
-                            <h4 class="text-xl font-semibold text-neon-blue">Performance Summary</h4>
-                        </div>
-                        <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
-                            <div class="text-center">
-                                <div class="text-2xl font-bold text-neon-green mb-1">4000+</div>
-                                <div class="text-sm text-gray-400">Monthly Visitors</div>
-                            </div>
-                            <div class="text-center">
-                                <div class="text-2xl font-bold text-neon-blue mb-1">300+</div>
-                                <div class="text-sm text-gray-400">Organic Leads</div>
-                            </div>
-                            <div class="text-center">
-                                <div class="text-2xl font-bold text-neon-purple mb-1">7.5%</div>
-                                <div class="text-sm text-gray-400">Conversion Rate</div>
-                            </div>
-                            <div class="text-center">
-                                <div class="text-2xl font-bold text-neon-pink mb-1">70%</div>
-                                <div class="text-sm text-gray-400">Engagement Rate</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Google Ads Performance -->
-            <div class="mb-16" data-aos="fade-up">
-                <h3 class="text-3xl font-bold text-center mb-8 text-neon-blue">Average Google Ads Performance</h3>
-                <div class="bg-dark-card/70 backdrop-blur-sm border border-neon-blue/30 rounded-xl p-8">
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
-                        <!-- CPC Comparison -->
-                        <div class="text-center">
-                            <h4 class="text-2xl font-semibold mb-6 text-neon-blue">CPC (Cost Per Click)</h4>
-                            <div class="space-y-6">
-                                <div class="bg-dark-bg/50 rounded-lg p-6 border border-neon-green/30">
-                                    <div class="text-4xl font-bold text-neon-green mb-2">$0.84</div>
-                                    <div class="text-lg text-gray-300">My CPC</div>
-                                </div>
-                                <div class="text-2xl text-gray-400">vs</div>
-                                <div class="bg-dark-bg/50 rounded-lg p-6 border border-gray-600">
-                                    <div class="text-4xl font-bold text-gray-400 mb-2">$2.46</div>
-                                    <div class="text-lg text-gray-400">Industry Average</div>
-                                </div>
-                                <div class="bg-gradient-to-r from-neon-green to-neon-blue rounded-lg p-4">
-                                    <div class="text-2xl font-bold text-white">66% Lower</div>
-                                    <div class="text-sm text-gray-200">Better Performance</div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- CPL Comparison -->
-                        <div class="text-center">
-                            <h4 class="text-2xl font-semibold mb-6 text-neon-green">CPL (Cost Per Lead)</h4>
-                            <div class="space-y-6">
-                                <div class="bg-dark-bg/50 rounded-lg p-6 border border-neon-green/30">
-                                    <div class="text-4xl font-bold text-neon-green mb-2">$4.44</div>
-                                    <div class="text-lg text-gray-300">My CPL</div>
-                                </div>
-                                <div class="text-2xl text-gray-400">vs</div>
-                                <div class="bg-dark-bg/50 rounded-lg p-6 border border-gray-600">
-                                    <div class="text-4xl font-bold text-gray-400 mb-2">$17.50</div>
-                                    <div class="text-lg text-gray-400">Industry Average</div>
-                                </div>
-                                <div class="bg-gradient-to-r from-neon-purple to-neon-pink rounded-lg p-4">
-                                    <div class="text-2xl font-bold text-white">75% Lower</div>
-                                    <div class="text-sm text-gray-200">Exceptional Efficiency</div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- SMS Campaign Performance -->
-            <div class="mb-16" data-aos="fade-up">
-                <h3 class="text-3xl font-bold text-center mb-8 text-neon-purple">Average SMS Campaign Performance</h3>
-                <div class="bg-dark-card/70 backdrop-blur-sm border border-neon-purple/30 rounded-xl p-8">
-                    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                        <!-- Cold SMS Volume -->
-                        <div class="text-center">
-                            <h4 class="text-2xl font-semibold mb-6 text-neon-purple">Cold SMS Volume</h4>
-                            <div class="space-y-6">
-                                <div class="bg-dark-bg/50 rounded-lg p-6 border border-neon-purple/30">
-                                    <div class="text-4xl font-bold text-neon-purple mb-2">30K</div>
-                                    <div class="text-lg text-gray-300">Monthly Messages</div>
-                                </div>
-                                <div class="bg-gradient-to-r from-neon-purple to-neon-pink rounded-lg p-4">
-                                    <div class="text-xl font-bold text-white">Cold Traffic</div>
-                                    <div class="text-sm text-gray-200">AI-Assisted Campaigns</div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Monthly Responses -->
-                        <div class="text-center">
-                            <h4 class="text-2xl font-semibold mb-6 text-neon-blue">Monthly Responses</h4>
-                            <div class="space-y-6">
-                                <div class="bg-dark-bg/50 rounded-lg p-6 border border-neon-blue/30">
-                                    <div class="text-4xl font-bold text-neon-blue mb-2">9K</div>
-                                    <div class="text-lg text-gray-300">Monthly Responses</div>
-                                </div>
-                                <div class="bg-gradient-to-r from-neon-blue to-neon-green rounded-lg p-4">
-                                    <div class="text-xl font-bold text-white">High Engagement</div>
-                                    <div class="text-sm text-gray-200">Cold Traffic Success</div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Monthly Leads -->
-                        <div class="text-center">
-                            <h4 class="text-2xl font-semibold mb-6 text-neon-green">Monthly Leads</h4>
-                            <div class="space-y-6">
-                                <div class="bg-dark-bg/50 rounded-lg p-6 border border-neon-green/30">
-                                    <div class="text-4xl font-bold text-neon-green mb-2">500</div>
-                                    <div class="text-lg text-gray-300">Monthly Leads</div>
-                                </div>
-                                <div class="bg-gradient-to-r from-neon-green to-neon-purple rounded-lg p-4">
-                                    <div class="text-xl font-bold text-white">Qualified Leads</div>
-                                    <div class="text-sm text-gray-200">From SMS Campaigns</div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <!-- SMS Performance Summary -->
-                    <div class="mt-8 bg-dark-bg/30 rounded-lg p-6">
-                        <div class="text-center mb-6">
-                            <h4 class="text-xl font-semibold text-neon-purple">SMS Campaign Funnel</h4>
-                        </div>
-                        <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
-                            <div class="text-center">
-                                <div class="text-2xl font-bold text-neon-purple mb-1">30K</div>
-                                <div class="text-sm text-gray-400">Cold SMS Sent</div>
-                            </div>
-                            <div class="text-center">
-                                <div class="text-2xl font-bold text-neon-blue mb-1">9K</div>
-                                <div class="text-sm text-gray-400">Responses (30%)</div>
-                            </div>
-                            <div class="text-center">
-                                <div class="text-2xl font-bold text-neon-green mb-1">500</div>
-                                <div class="text-sm text-gray-400">Qualified Leads</div>
-                            </div>
-                            <div class="text-center">
-                                <div class="text-2xl font-bold text-neon-pink mb-1">5.6%</div>
-                                <div class="text-sm text-gray-400">Response to Lead</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Tech Stack Mastery -->
-            <div class="mb-16" data-aos="fade-up">
-                <div class="bg-dark-card/70 backdrop-blur-sm border border-neon-purple/30 rounded-xl p-8">
-                    <h3 class="text-3xl font-bold text-center mb-8 text-neon-purple">Complete Tech Stack Mastery</h3>
-                    
-                    <!-- Frontend & Backend -->
-                    <div class="mb-8">
-                        <h4 class="text-xl font-semibold mb-4 text-neon-blue">Frontend & Backend Development</h4>
-                        <div class="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 gap-3 sm:gap-4">
-                            <div class="bg-dark-bg/50 rounded-lg p-3 sm:p-4 text-center hover:border-neon-blue border border-transparent transition-all duration-300">
-                                <i class="fab fa-node-js text-xl sm:text-xl sm:text-2xl text-neon-green mb-2"></i>
-                                <div class="text-xs sm:text-sm text-gray-300">Node.js</div>
-                            </div>
-                            <div class="bg-dark-bg/50 rounded-lg p-3 sm:p-4 text-center hover:border-neon-blue border border-transparent transition-all duration-300">
-                                <i class="fab fa-js-square text-xl sm:text-2xl text-neon-blue mb-2"></i>
-                                <div class="text-xs sm:text-sm text-gray-300">TypeScript</div>
-                            </div>
-                            <div class="bg-dark-bg/50 rounded-lg p-3 sm:p-4 text-center hover:border-neon-blue border border-transparent transition-all duration-300">
-                                <i class="fab fa-react text-xl sm:text-2xl text-neon-purple mb-2"></i>
-                                <div class="text-xs sm:text-sm text-gray-300">React</div>
-                            </div>
-                            <div class="bg-dark-bg/50 rounded-lg p-3 sm:p-4 text-center hover:border-neon-blue border border-transparent transition-all duration-300">
-                                <i class="fas fa-code text-xl sm:text-2xl text-neon-pink mb-2"></i>
-                                <div class="text-xs sm:text-sm text-gray-300">Next.js</div>
-                            </div>
-                            <div class="bg-dark-bg/50 rounded-lg p-3 sm:p-4 text-center hover:border-neon-blue border border-transparent transition-all duration-300">
-                                <i class="fas fa-server text-xl sm:text-2xl text-neon-green mb-2"></i>
-                                <div class="text-xs sm:text-sm text-gray-300">Express</div>
-                            </div>
-                            <div class="bg-dark-bg/50 rounded-lg p-3 sm:p-4 text-center hover:border-neon-blue border border-transparent transition-all duration-300">
-                                <i class="fab fa-php text-xl sm:text-2xl text-neon-blue mb-2"></i>
-                                <div class="text-xs sm:text-sm text-gray-300">PHP</div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Databases & Cloud -->
-                    <div class="mb-8">
-                        <h4 class="text-xl font-semibold mb-4 text-neon-green">Databases & Cloud Infrastructure</h4>
-                        <div class="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 gap-3 sm:gap-4">
-                            <div class="bg-dark-bg/50 rounded-lg p-3 sm:p-4 text-center hover:border-neon-blue border border-transparent transition-all duration-300">
-                                <i class="fas fa-leaf text-xl sm:text-2xl text-neon-green mb-2"></i>
-                                <div class="text-xs sm:text-sm text-gray-300">MongoDB</div>
-                            </div>
-                            <div class="bg-dark-bg/50 rounded-lg p-3 sm:p-4 text-center hover:border-neon-blue border border-transparent transition-all duration-300">
-                                <i class="fas fa-database text-xl sm:text-2xl text-neon-blue mb-2"></i>
-                                <div class="text-xs sm:text-sm text-gray-300">MySQL</div>
-                            </div>
-                            <div class="bg-dark-bg/50 rounded-lg p-3 sm:p-4 text-center hover:border-neon-blue border border-transparent transition-all duration-300">
-                                <i class="fab fa-aws text-xl sm:text-2xl text-neon-purple mb-2"></i>
-                                <div class="text-xs sm:text-sm text-gray-300">AWS S3</div>
-                            </div>
-                            <div class="bg-dark-bg/50 rounded-lg p-3 sm:p-4 text-center hover:border-neon-blue border border-transparent transition-all duration-300">
-                                <i class="fas fa-cloud text-xl sm:text-2xl text-neon-pink mb-2"></i>
-                                <div class="text-xs sm:text-sm text-gray-300">Railway</div>
-                            </div>
-                            <div class="bg-dark-bg/50 rounded-lg p-3 sm:p-4 text-center hover:border-neon-blue border border-transparent transition-all duration-300">
-                                <i class="fas fa-server text-xl sm:text-2xl text-neon-green mb-2"></i>
-                                <div class="text-xs sm:text-sm text-gray-300">XAMPP</div>
-                            </div>
-                            <div class="bg-dark-bg/50 rounded-lg p-3 sm:p-4 text-center hover:border-neon-blue border border-transparent transition-all duration-300">
-                                <i class="fas fa-code-branch text-xl sm:text-2xl text-neon-blue mb-2"></i>
-                                <div class="text-xs sm:text-sm text-gray-300">REST API</div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Marketing & Analytics -->
-                    <div class="mb-8">
-                        <h4 class="text-xl font-semibold mb-4 text-neon-blue">Marketing & Analytics Platforms</h4>
-                        <div class="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 gap-3 sm:gap-4">
-                            <div class="bg-dark-bg/50 rounded-lg p-3 sm:p-4 text-center hover:border-neon-blue border border-transparent transition-all duration-300">
-                                <i class="fab fa-google text-xl sm:text-2xl text-neon-purple mb-2"></i>
-                                <div class="text-xs sm:text-sm text-gray-300">Google Ads</div>
-                            </div>
-                            <div class="bg-dark-bg/50 rounded-lg p-3 sm:p-4 text-center hover:border-neon-blue border border-transparent transition-all duration-300">
-                                <i class="fas fa-chart-line text-xl sm:text-2xl text-neon-pink mb-2"></i>
-                                <div class="text-xs sm:text-sm text-gray-300">Analytics</div>
-                            </div>
-                            <div class="bg-dark-bg/50 rounded-lg p-3 sm:p-4 text-center hover:border-neon-blue border border-transparent transition-all duration-300">
-                                <i class="fab fa-facebook text-xl sm:text-2xl text-neon-green mb-2"></i>
-                                <div class="text-xs sm:text-sm text-gray-300">Facebook Ads</div>
-                            </div>
-                            <div class="bg-dark-bg/50 rounded-lg p-3 sm:p-4 text-center hover:border-neon-blue border border-transparent transition-all duration-300">
-                                <i class="fab fa-instagram text-xl sm:text-2xl text-neon-blue mb-2"></i>
-                                <div class="text-xs sm:text-sm text-gray-300">Instagram</div>
-                            </div>
-                            <div class="bg-dark-bg/50 rounded-lg p-3 sm:p-4 text-center hover:border-neon-blue border border-transparent transition-all duration-300">
-                                <i class="fas fa-chart-bar text-xl sm:text-2xl text-neon-purple mb-2"></i>
-                                <div class="text-xs sm:text-sm text-gray-300">GoHighLevel</div>
-                            </div>
-                            <div class="bg-dark-bg/50 rounded-lg p-3 sm:p-4 text-center hover:border-neon-blue border border-transparent transition-all duration-300">
-                                <i class="fas fa-table text-xl sm:text-2xl text-neon-pink mb-2"></i>
-                                <div class="text-xs sm:text-sm text-gray-300">Google Sheets</div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Communication & AI -->
-                    <div class="mb-8">
-                        <h4 class="text-xl font-semibold mb-4 text-neon-purple">Communication & AI Tools</h4>
-                        <div class="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 gap-3 sm:gap-4">
-                            <div class="bg-dark-bg/50 rounded-lg p-3 sm:p-4 text-center hover:border-neon-blue border border-transparent transition-all duration-300">
-                                <i class="fas fa-sms text-xl sm:text-2xl text-neon-green mb-2"></i>
-                                <div class="text-xs sm:text-sm text-gray-300">Twilio A2P</div>
-                            </div>
-                            <div class="bg-dark-bg/50 rounded-lg p-3 sm:p-4 text-center hover:border-neon-blue border border-transparent transition-all duration-300">
-                                <i class="fas fa-envelope text-xl sm:text-2xl text-neon-blue mb-2"></i>
-                                <div class="text-xs sm:text-sm text-gray-300">SendGrid</div>
-                            </div>
-                            <div class="bg-dark-bg/50 rounded-lg p-3 sm:p-4 text-center hover:border-neon-blue border border-transparent transition-all duration-300">
-                                <i class="fas fa-robot text-xl sm:text-2xl text-neon-purple mb-2"></i>
-                                <div class="text-xs sm:text-sm text-gray-300">OpenAI</div>
-                            </div>
-                            <div class="bg-dark-bg/50 rounded-lg p-3 sm:p-4 text-center hover:border-neon-blue border border-transparent transition-all duration-300">
-                                <i class="fas fa-brain text-xl sm:text-2xl text-neon-pink mb-2"></i>
-                                <div class="text-xs sm:text-sm text-gray-300">AI Chatbots</div>
-                            </div>
-                            <div class="bg-dark-bg/50 rounded-lg p-3 sm:p-4 text-center hover:border-neon-blue border border-transparent transition-all duration-300">
-                                <i class="fas fa-microphone text-xl sm:text-2xl text-neon-green mb-2"></i>
-                                <div class="text-xs sm:text-sm text-gray-300">Voice AI</div>
-                            </div>
-                            <div class="bg-dark-bg/50 rounded-lg p-3 sm:p-4 text-center hover:border-neon-blue border border-transparent transition-all duration-300">
-                                <i class="fas fa-comments text-xl sm:text-2xl text-neon-blue mb-2"></i>
-                                <div class="text-xs sm:text-sm text-gray-300">SMS Bots</div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Game Development & Design -->
-                    <div class="mb-8">
-                        <h4 class="text-xl font-semibold mb-4 text-neon-pink">Game Development & Design</h4>
-                        <div class="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 gap-3 sm:gap-4">
-                            <div class="bg-dark-bg/50 rounded-lg p-3 sm:p-4 text-center hover:border-neon-blue border border-transparent transition-all duration-300">
-                                <i class="fab fa-unity text-xl sm:text-2xl text-neon-green mb-2"></i>
-                                <div class="text-xs sm:text-sm text-gray-300">Unity C#</div>
-                            </div>
-                            <div class="bg-dark-bg/50 rounded-lg p-3 sm:p-4 text-center hover:border-neon-blue border border-transparent transition-all duration-300">
-                                <i class="fas fa-gamepad text-xl sm:text-2xl text-neon-blue mb-2"></i>
-                                <div class="text-xs sm:text-sm text-gray-300">Game Design</div>
-                            </div>
-                            <div class="bg-dark-bg/50 rounded-lg p-3 sm:p-4 text-center hover:border-neon-blue border border-transparent transition-all duration-300">
-                                <i class="fab fa-flutter text-xl sm:text-2xl text-neon-purple mb-2"></i>
-                                <div class="text-xs sm:text-sm text-gray-300">Flutter</div>
-                            </div>
-                            <div class="bg-dark-bg/50 rounded-lg p-3 sm:p-4 text-center hover:border-neon-blue border border-transparent transition-all duration-300">
-                                <i class="fas fa-code text-xl sm:text-2xl text-neon-pink mb-2"></i>
-                                <div class="text-xs sm:text-sm text-gray-300">Dart</div>
-                            </div>
-                            <div class="bg-dark-bg/50 rounded-lg p-3 sm:p-4 text-center hover:border-neon-blue border border-transparent transition-all duration-300">
-                                <i class="fas fa-palette text-xl sm:text-2xl text-neon-green mb-2"></i>
-                                <div class="text-xs sm:text-sm text-gray-300">Photoshop</div>
-                            </div>
-                            <div class="bg-dark-bg/50 rounded-lg p-3 sm:p-4 text-center hover:border-neon-blue border border-transparent transition-all duration-300">
-                                <i class="fas fa-vector-square text-xl sm:text-2xl text-neon-blue mb-2"></i>
-                                <div class="text-xs sm:text-sm text-gray-300">Illustrator</div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Data & Analytics -->
-                    <div>
-                        <h4 class="text-xl font-semibold mb-4 text-neon-green">Data Analytics & Business Intelligence</h4>
-                        <div class="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 gap-3 sm:gap-4">
-                            <div class="bg-dark-bg/50 rounded-lg p-3 sm:p-4 text-center hover:border-neon-blue border border-transparent transition-all duration-300">
-                                <i class="fab fa-python text-xl sm:text-2xl text-neon-green mb-2"></i>
-                                <div class="text-xs sm:text-sm text-gray-300">Python</div>
-                            </div>
-                            <div class="bg-dark-bg/50 rounded-lg p-3 sm:p-4 text-center hover:border-neon-blue border border-transparent transition-all duration-300">
-                                <i class="fas fa-chart-pie text-xl sm:text-2xl text-neon-blue mb-2"></i>
-                                <div class="text-xs sm:text-sm text-gray-300">Data Analysis</div>
-                            </div>
-                            <div class="bg-dark-bg/50 rounded-lg p-3 sm:p-4 text-center hover:border-neon-blue border border-transparent transition-all duration-300">
-                                <i class="fas fa-search text-xl sm:text-2xl text-neon-purple mb-2"></i>
-                                <div class="text-xs sm:text-sm text-gray-300">SEO/CRO</div>
-                            </div>
-                            <div class="bg-dark-bg/50 rounded-lg p-3 sm:p-4 text-center hover:border-neon-blue border border-transparent transition-all duration-300">
-                                <i class="fas fa-funnel-dollar text-xl sm:text-2xl text-neon-pink mb-2"></i>
-                                <div class="text-xs sm:text-sm text-gray-300">Attribution</div>
-                            </div>
-                            <div class="bg-dark-bg/50 rounded-lg p-3 sm:p-4 text-center hover:border-neon-blue border border-transparent transition-all duration-300">
-                                <i class="fas fa-code-branch text-xl sm:text-2xl text-neon-green mb-2"></i>
-                                <div class="text-xs sm:text-sm text-gray-300">Git/SCM</div>
-                            </div>
-                            <div class="bg-dark-bg/50 rounded-lg p-3 sm:p-4 text-center hover:border-neon-blue border border-transparent transition-all duration-300">
-                                <i class="fas fa-cogs text-xl sm:text-2xl text-neon-blue mb-2"></i>
-                                <div class="text-xs sm:text-sm text-gray-300">Webhooks</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Efficiency Metrics -->
-            <div class="mb-16" data-aos="fade-up">
-                <div class="bg-dark-card/70 backdrop-blur-sm border border-neon-green/30 rounded-xl p-8">
-                    <h3 class="text-3xl font-bold text-center mb-8 text-neon-green">Performance & Efficiency Metrics</h3>
-                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-                        <div class="text-center">
-                            <div class="text-4xl font-bold text-neon-green mb-2">3x</div>
-                            <div class="text-lg text-gray-300 mb-4">Lead Generation Growth</div>
-                            <div class="w-full bg-gray-700 rounded-full h-3">
-                                <div class="bg-gradient-to-r from-neon-green to-neon-blue h-3 rounded-full animate-pulse-glow" style="width: 100%"></div>
-                            </div>
-                        </div>
-                        <div class="text-center">
-                            <div class="text-4xl font-bold text-neon-blue mb-2">70%</div>
-                            <div class="text-lg text-gray-300 mb-4">Response Time Reduction</div>
-                            <div class="w-full bg-gray-700 rounded-full h-3">
-                                <div class="bg-gradient-to-r from-neon-blue to-neon-purple h-3 rounded-full animate-pulse-glow" style="width: 70%"></div>
-                            </div>
-                        </div>
-                        <div class="text-center">
-                            <div class="text-4xl font-bold text-neon-purple mb-2">18%</div>
-                            <div class="text-lg text-gray-300 mb-4">Appointment Lift</div>
-                            <div class="w-full bg-gray-700 rounded-full h-3">
-                                <div class="bg-gradient-to-r from-neon-purple to-neon-pink h-3 rounded-full animate-pulse-glow" style="width: 60%"></div>
-                            </div>
-                        </div>
-                        <div class="text-center">
-                            <div class="text-4xl font-bold text-neon-pink mb-2">120%</div>
-                            <div class="text-lg text-gray-300 mb-4">Efficiency Increase</div>
-                            <div class="w-full bg-gray-700 rounded-full h-3">
-                                <div class="bg-gradient-to-r from-neon-pink to-neon-blue h-3 rounded-full animate-pulse-glow" style="width: 100%"></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Websites Developed -->
-    <section id="websites" class="py-20">
-        <div class="container mx-auto px-4">
-            <div class="text-center mb-16" data-aos="fade-up">
-                <h2 class="text-5xl font-bold mb-4 bg-gradient-to-r from-neon-blue to-neon-green bg-clip-text text-transparent">
-                    Websites Developed & Designed
-                </h2>
-                <p class="text-xl text-gray-400 max-w-3xl mx-auto">
-                    Full-stack web development projects showcasing technical expertise and design skills
-                </p>
-            </div>
-
-            <!-- Featured Project - Rocky Motors -->
-            <div class="mb-16" data-aos="fade-up">
-                <div class="bg-dark-card/70 backdrop-blur-sm border border-neon-blue/30 rounded-xl p-8 hover:border-neon-blue/60 transition-all duration-300">
-                    <div class="text-center mb-8">
-                        <div class="inline-block bg-gradient-to-r from-neon-blue to-neon-green text-white px-4 py-2 rounded-full text-sm font-semibold mb-4">
-                            FEATURED PROJECT
-                        </div>
-                        <h3 class="text-4xl font-bold mb-4 text-neon-blue">Rocky Motors</h3>
-                        <p class="text-xl text-gray-300 max-w-3xl mx-auto mb-6">
-                            My specialty automotive website with comprehensive inventory management, lead generation, and customer engagement systems
-                        </p>
-                    </div>
-
-                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
-                        <!-- Technical Details -->
-                        <div class="space-y-6">
-                            <div class="bg-dark-bg/50 rounded-lg p-6">
-                                <h4 class="text-2xl font-semibold text-neon-green mb-4">Technical Scope</h4>
-                                <div class="space-y-4">
-                                    <div class="flex items-center">
-                                        <div class="w-3 h-3 bg-neon-blue rounded-full mr-3"></div>
-                                        <span class="text-gray-300">100,000+ Lines of Code</span>
-                                    </div>
-                                    <div class="flex items-center">
-                                        <div class="w-3 h-3 bg-neon-green rounded-full mr-3"></div>
-                                        <span class="text-gray-300">Full-Time Development & Maintenance</span>
-                                    </div>
-                                    <div class="flex items-center">
-                                        <div class="w-3 h-3 bg-neon-purple rounded-full mr-3"></div>
-                                        <span class="text-gray-300">React/TypeScript Frontend</span>
-                                    </div>
-                                    <div class="flex items-center">
-                                        <div class="w-3 h-3 bg-neon-pink rounded-full mr-3"></div>
-                                        <span class="text-gray-300">Node.js/Express Backend</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Key Features -->
-                        <div class="space-y-6">
-                            <div class="bg-dark-bg/50 rounded-lg p-6">
-                                <h4 class="text-2xl font-semibold text-neon-purple mb-4">Key Features</h4>
-                                <div class="space-y-4">
-                                    <div class="flex items-center">
-                                        <div class="w-3 h-3 bg-neon-blue rounded-full mr-3"></div>
-                                        <span class="text-gray-300">Live Inventory Management</span>
-                                    </div>
-                                    <div class="flex items-center">
-                                        <div class="w-3 h-3 bg-neon-green rounded-full mr-3"></div>
-                                        <span class="text-gray-300">Real-Time Lead Tracking</span>
-                                    </div>
-                                    <div class="flex items-center">
-                                        <div class="w-3 h-3 bg-neon-purple rounded-full mr-3"></div>
-                                        <span class="text-gray-300">Custom CRM Integration</span>
-                                    </div>
-                                    <div class="flex items-center">
-                                        <div class="w-3 h-3 bg-neon-pink rounded-full mr-3"></div>
-                                        <span class="text-gray-300">AI-Powered Chat Systems</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Performance Stats -->
-                    <div class="mt-8 bg-dark-bg/30 rounded-lg p-6">
-                        <div class="grid grid-cols-1 md:grid-cols-4 gap-6 text-center mb-8">
-                            <div>
-                                <div class="text-3xl font-bold text-neon-blue mb-2">4000+</div>
-                                <div class="text-sm text-gray-400">Monthly Visitors</div>
-                            </div>
-                            <div>
-                                <div class="text-3xl font-bold text-neon-green mb-2">300+</div>
-                                <div class="text-sm text-gray-400">Organic Leads/Month</div>
-                            </div>
-                            <div>
-                                <div class="text-3xl font-bold text-neon-purple mb-2">7.5%</div>
-                                <div class="text-sm text-gray-400">Conversion Rate</div>
-                            </div>
-                            <div>
-                                <div class="text-3xl font-bold text-neon-pink mb-2">70%</div>
-                                <div class="text-sm text-gray-400">User Engagement</div>
-                            </div>
-                        </div>
-                        
-                        <!-- Action Buttons -->
-                        <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                            <a href="/rocky-motors" class="inline-flex items-center px-8 py-4 bg-gradient-to-r from-neon-blue to-neon-purple rounded-full font-semibold text-white hover:shadow-lg hover:shadow-neon-blue/50 transition-all duration-300 transform hover:scale-105">
-                                <i class="fas fa-info-circle mr-3"></i>
-                                View Full Details
-                            </a>
-                            <a href="https://rockymotors.com" target="_blank" class="inline-flex items-center px-8 py-4 border-2 border-neon-green rounded-full font-semibold text-neon-green hover:bg-neon-green hover:text-black transition-all duration-300 transform hover:scale-105">
-                                <i class="fas fa-external-link-alt mr-3"></i>
-                                Visit Website
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Additional Projects -->
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
-                <!-- Extreme Curbing -->
-                <div class="bg-dark-card/50 backdrop-blur-sm border border-gray-700 rounded-xl p-8 hover:border-neon-green/60 transition-all duration-300 hover:scale-105" data-aos="fade-up" data-aos-delay="50">
-                    <div class="text-center mb-6">
-                        <div class="w-16 h-16 mx-auto mb-4 bg-gradient-to-r from-neon-green to-neon-blue rounded-full flex items-center justify-center">
-                            <i class="fas fa-leaf text-2xl text-white"></i>
-                        </div>
-                        <h3 class="text-2xl font-semibold mb-3 text-neon-green">Extreme Curbing</h3>
-                        <p class="text-gray-400 mb-4">Professional landscaping business website commission</p>
-                    </div>
-                    
-                    <div class="space-y-4 mb-6">
-                        <div class="bg-dark-bg/50 rounded-lg p-4">
-                            <h4 class="text-lg font-semibold text-neon-blue mb-2">Services Showcased</h4>
-                            <div class="text-sm text-gray-300 space-y-1">
-                                <div>• Cement Curbing & Landscaping</div>
-                                <div>• Portfolio & Testimonials</div>
-                                <div>• Service Area Coverage</div>
-                                <div>• Contact & Estimates</div>
-                            </div>
-                        </div>
-                        
-                        <div class="bg-dark-bg/50 rounded-lg p-4">
-                            <h4 class="text-lg font-semibold text-neon-purple mb-2">Technical Features</h4>
-                            <div class="text-sm text-gray-300 space-y-1">
-                                <div>• Responsive Design</div>
-                                <div>• SEO Optimized</div>
-                                <div>• Fast Loading</div>
-                                <div>• Mobile-First Approach</div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="text-center">
-                        <a href="https://www.extremecurbing.com/" target="_blank" class="inline-flex items-center px-6 py-3 bg-gradient-to-r from-neon-green to-neon-blue rounded-full font-semibold text-white hover:shadow-lg hover:shadow-neon-green/50 transition-all duration-300 transform hover:scale-105">
-                            <i class="fas fa-external-link-alt mr-2"></i>
-                            View Website
-                        </a>
-                    </div>
-                </div>
-
-                <!-- Peepo Servers -->
-                <div class="bg-dark-card/50 backdrop-blur-sm border border-gray-700 rounded-xl p-8 hover:border-neon-purple/60 transition-all duration-300 hover:scale-105" data-aos="fade-up" data-aos-delay="75">
-                    <div class="text-center mb-6">
-                        <div class="w-16 h-16 mx-auto mb-4 bg-gradient-to-r from-neon-purple to-neon-pink rounded-full flex items-center justify-center">
-                            <i class="fas fa-gamepad text-2xl text-white"></i>
-                        </div>
-                        <h3 class="text-2xl font-semibold mb-3 text-neon-purple">Peepo Servers</h3>
-                        <p class="text-gray-400 mb-4">Personal project for hosting gaming events and servers</p>
-                    </div>
-                    
-                    <div class="space-y-4 mb-6">
-                        <div class="bg-dark-bg/50 rounded-lg p-4">
-                            <h4 class="text-lg font-semibold text-neon-blue mb-2">Project Focus</h4>
-                            <div class="text-sm text-gray-300 space-y-1">
-                                <div>• Gaming Server Management</div>
-                                <div>• Event Coordination</div>
-                                <div>• Community Building</div>
-                                <div>• Server Hosting Solutions</div>
-                            </div>
-                        </div>
-                        
-                        <div class="bg-dark-bg/50 rounded-lg p-4">
-                            <h4 class="text-lg font-semibold text-neon-green mb-2">Technical Stack</h4>
-                            <div class="text-sm text-gray-300 space-y-1">
-                                <div>• Server Infrastructure</div>
-                                <div>• Event Management Tools</div>
-                                <div>• Real-Time Communication</div>
-                                <div>• Custom Gaming Solutions</div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="text-center">
-                        <a href="https://peeposervers.com/" target="_blank" class="inline-flex items-center px-6 py-3 bg-gradient-to-r from-neon-purple to-neon-pink rounded-full font-semibold text-white hover:shadow-lg hover:shadow-neon-purple/50 transition-all duration-300 transform hover:scale-105">
-                            <i class="fas fa-external-link-alt mr-2"></i>
-                            View Website
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact" class="py-20 bg-gradient-to-r from-dark-accent/20 to-transparent">
-        <div class="container mx-auto px-4">
-            <div class="text-center mb-16" data-aos="fade-up">
-                <h2 class="text-5xl font-bold mb-4 bg-gradient-to-r from-neon-blue to-neon-purple bg-clip-text text-transparent">
-                    Let's Build Something Amazing
-                </h2>
-                <p class="text-xl text-gray-400 max-w-3xl mx-auto">
-                    Ready to transform your marketing operations with cutting-edge automation?
-                </p>
-            </div>
-
-            <div class="max-w-6xl mx-auto">
-                <!-- Contact Info Section -->
-                <div class="text-center mb-12" data-aos="fade-up">
-                    <div class="max-w-2xl mx-auto">
-                        <h3 class="text-3xl font-bold mb-8 text-neon-green">Get In Touch</h3>
-                        <div class="grid grid-cols-1 sm:grid-cols-3 gap-6 sm:gap-8 mb-8">
-                            <div class="flex flex-col items-center">
-                                <div class="w-16 h-16 bg-gradient-to-r from-neon-blue to-neon-green rounded-full flex items-center justify-center mb-4">
-                                    <i class="fas fa-map-marker-alt text-2xl text-white"></i>
-                                </div>
-                                <div class="text-white font-semibold mb-1">Location</div>
-                                <div class="text-gray-400">Windsor, Ontario</div>
-                            </div>
-                            <div class="flex flex-col items-center">
-                                <div class="w-16 h-16 bg-gradient-to-r from-neon-green to-neon-purple rounded-full flex items-center justify-center mb-4">
-                                    <i class="fas fa-envelope text-2xl text-white"></i>
-                                </div>
-                                <div class="text-white font-semibold mb-1">Email</div>
-                                <div class="text-gray-400">MathewRegierMail@gmail.com</div>
-                            </div>
-                            <div class="flex flex-col items-center">
-                                <div class="w-16 h-16 bg-gradient-to-r from-neon-purple to-neon-pink rounded-full flex items-center justify-center mb-4">
-                                    <i class="fas fa-phone text-2xl text-white"></i>
-                                </div>
-                                <div class="text-white font-semibold mb-1">Phone</div>
-                                <div class="text-gray-400">(226) 961-1073</div>
-                            </div>
-                        </div>
-                        
-                        <!-- LinkedIn Button -->
-                        <div class="flex justify-center">
-                            <a href="https://www.linkedin.com/in/mathew-regier-396588288/" target="_blank" class="inline-flex items-center px-8 py-4 bg-gradient-to-r from-neon-blue to-neon-green rounded-full font-semibold text-white hover:shadow-lg hover:shadow-neon-blue/50 transition-all duration-300 transform hover:scale-105">
-                                <i class="fab fa-linkedin text-xl mr-3"></i>
-                                Connect on LinkedIn
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Contact Form -->
-                <div class="max-w-2xl mx-auto" data-aos="fade-up" data-aos-delay="75">
-                    <div class="bg-dark-card/70 backdrop-blur-sm border border-gray-700 rounded-xl p-6 sm:p-10">
-                        <h4 class="text-xl sm:text-2xl font-bold text-center mb-6 sm:mb-8 text-neon-blue">Send Me a Message</h4>
-                        <form id="contact-form" class="space-y-8">
-                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
-                                <div>
-                                    <label class="block text-sm font-medium text-gray-300 mb-3">Name</label>
-                                    <input type="text" name="name" required class="w-full bg-dark-bg/50 border border-gray-600 rounded-lg px-4 py-3 sm:py-4 text-white focus:border-neon-blue focus:outline-none transition-colors duration-300">
-                                </div>
-                                <div>
-                                    <label class="block text-sm font-medium text-gray-300 mb-3">Email</label>
-                                    <input type="email" name="email" required class="w-full bg-dark-bg/50 border border-gray-600 rounded-lg px-4 py-3 sm:py-4 text-white focus:border-neon-blue focus:outline-none transition-colors duration-300">
-                                </div>
-                            </div>
-                            <div>
-                                <label class="block text-sm font-medium text-gray-300 mb-3">Subject</label>
-                                <input type="text" name="subject" required class="w-full bg-dark-bg/50 border border-gray-600 rounded-lg px-4 py-4 text-white focus:border-neon-blue focus:outline-none transition-colors duration-300">
-                            </div>
-                            <div>
-                                <label class="block text-sm font-medium text-gray-300 mb-3">Message</label>
-                                <textarea rows="6" name="message" required class="w-full bg-dark-bg/50 border border-gray-600 rounded-lg px-4 py-4 text-white focus:border-neon-blue focus:outline-none transition-colors duration-300 resize-none"></textarea>
-                            </div>
-                            <div class="pt-4">
-                                <button type="submit" id="submit-btn" class="w-full bg-gradient-to-r from-neon-blue to-neon-purple px-8 py-5 rounded-lg font-semibold text-white hover:shadow-lg hover:shadow-neon-blue/50 transition-all duration-300 transform hover:scale-105">
-                                    <i class="fas fa-paper-plane mr-3"></i>
-                                    Send Message
-                                </button>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="py-8 border-t border-gray-800">
-        <div class="container mx-auto px-4">
-            <div class="text-center">
-                <div class="text-2xl font-bold bg-gradient-to-r from-neon-blue to-neon-purple bg-clip-text text-transparent mb-4">
-                    Mathew Regier
-                </div>
-                <p class="text-gray-400 mb-4">Marketing Automation Specialist • AI Integration Expert • Sales Technology Innovator</p>
-                <p class="text-sm text-gray-500">© 2025 Mathew Regier. All rights reserved.</p>
-            </div>
-        </div>
-    </footer>
-
-    <!-- Go to Top Button -->
-    <button id="go-to-top" class="fixed bottom-4 right-4 sm:bottom-8 sm:right-8 w-12 h-12 sm:w-14 sm:h-14 bg-gradient-to-r from-neon-blue to-neon-purple rounded-full flex items-center justify-center text-white shadow-xl border-2 border-white/20 hover:shadow-neon-blue/50 transition-all duration-300 transform hover:scale-110 z-[60] opacity-0 invisible">
-        <i class="fas fa-arrow-up text-base sm:text-lg"></i>
-    </button>
-
-    <script src="js/main-clean.js"></script>
+  <script src="/js/main.js?v=20260504b" defer></script>
 </body>
 </html>
