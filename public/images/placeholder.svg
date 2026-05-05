@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="800" viewBox="0 0 800 800" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Photo placeholder">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#EEF2FF"/>
+      <stop offset="55%" stop-color="#E0F2FE"/>
+      <stop offset="100%" stop-color="#DCFCE7"/>
+    </linearGradient>
+    <radialGradient id="halo" cx="50%" cy="42%" r="55%">
+      <stop offset="0%" stop-color="rgba(37,99,235,0.18)"/>
+      <stop offset="100%" stop-color="rgba(37,99,235,0)"/>
+    </radialGradient>
+  </defs>
+  <rect width="800" height="800" fill="url(#bg)"/>
+  <rect width="800" height="800" fill="url(#halo)"/>
+  <g fill="#2563EB" font-family="Inter, system-ui, -apple-system, sans-serif" text-anchor="middle">
+    <text x="400" y="370" font-size="180" font-weight="800" letter-spacing="-8">MR</text>
+    <text x="400" y="450" font-size="22" font-weight="700" letter-spacing="6" fill="#475569">DROP YOUR PHOTO HERE</text>
+    <text x="400" y="490" font-size="18" font-weight="500" fill="#64748B" letter-spacing="2">/public/images/mathew.jpg</text>
+  </g>
+</svg>
