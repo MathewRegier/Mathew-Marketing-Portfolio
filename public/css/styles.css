@@ -596,6 +596,12 @@ h3 {
   max-width: 780px;
 }
 
+.project-card p strong,
+.clean-list strong {
+  color: var(--ink);
+  font-weight: 700;
+}
+
 .project-stats {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
